@@ -2,12 +2,11 @@ plugins {
 	id("com.playmonumenta.papermixins.mod-conventions")
 }
 
-group = "org.example"
-version = "1.0.0-SNAPSHOT"
+group = "kim.biryeong"
+version = "1.0.0"
 
 dependencies {
-	implementation(libs.nbtapi.plugin)
-	shade(libs.nbtapi)
+
 }
 
 // Tasks configuration
@@ -24,13 +23,5 @@ tasks {
 				)
 			)
 		}
-	}
-
-	reobfJar {
-		accessWideners.add("exampleMod.accesswidener")
-	}
-
-	shadowJar {
-		relocate("de.tr7zw.changeme.nbtapi", "de.tr7zw.nbtapi")
 	}
 }

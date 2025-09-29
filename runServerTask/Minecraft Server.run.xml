@@ -6,7 +6,7 @@
       <env name="IS_DEVENV" value="1" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="com.floweytf.fabricpaperloader.Main" />
-    <module name="fabric-paper-example.main" />
+    <module name="fabric-paper-mod-manager.main" />
     <option name="PROGRAM_PARAMETERS" value="-nogui" />
     <option name="VM_PARAMETERS" value="-Dfabric.development=true -Dmixin.debug.export=true -Dfabric.classPathGroups=$PROJECT_DIR$/build/classes/java/main:$PROJECT_DIR$/build/resources/main" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run/" />

@@ -54,15 +54,15 @@ publishing {
     }
     repositories {
         maven {
-            name = "MonumentaMaven"
+            name = "PrivateRepository"
             url = when (version.toString().endsWith("SNAPSHOT")) {
-                true -> uri("YOUR_SNAPSHOT_REPOSITORY")
-                false -> uri("YOUR_RELEASE_REPOSITORY")
+                true -> uri(System.getenv("INTERNAL_REPOSITORY") + "maven-snapshots/")
+                false -> uri(System.getenv("INTERNAL_REPOSITORY") + "maven-releases/")
             }
 
             credentials {
-                username = System.getenv("USERNAME")
-                password = System.getenv("TOKEN")
+                username = System.getenv("INTERNAL_USERNAME")
+                password = System.getenv("INTERNAL_PASSWORD")
             }
         }
     }

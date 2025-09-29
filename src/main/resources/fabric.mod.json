@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "test_mod",
+  "id": "mod-manager",
   "version": "${version}",
+  "entrypoints": {
+    "main": [
+      "kim.biryeong.manager.ModManagerInitializer"
+    ]
+  },
   "mixins": [
-    "exampleMod.mixins.json"
-  ],
-  "accessWidener" : "exampleMod.accesswidener"
+    "modManager.mixins.json"
+  ]
 }

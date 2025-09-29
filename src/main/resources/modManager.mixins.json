@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8.6",
+  "package": "kim.biryeong.manager.mixin",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CommodoreMixin",
+    "MainMixin",
+    "command.CommandsMixin",
+    "command.SharedSuggestionProviderMixin"
+  ]
+}
