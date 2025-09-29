@@ -3,7 +3,7 @@
   "minVersion": "0.8.6",
   "package": "kim.biryeong.manager.mixin",
   "target": "@env(DEFAULT)",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
     "CommodoreMixin",
     "MainMixin",
