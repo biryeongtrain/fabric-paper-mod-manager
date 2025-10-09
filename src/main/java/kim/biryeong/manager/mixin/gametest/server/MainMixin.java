@@ -22,8 +22,8 @@ public class MainMixin {
     @Inject(method = "main", at = @At(value = "INVOKE_ASSIGN", target = "Lnet/minecraft/server/packs/repository/ServerPacksSource;createPackRepository(Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;)Lnet/minecraft/server/packs/repository/PackRepository;"), cancellable = true)
     private static void gametest$runGameTestServer(OptionSet optionSet, CallbackInfo ci, @Local LevelStorageSource.LevelStorageAccess levelStorageAccess, @Local PackRepository packRepository) {
         if (FabricGameTestRunner.ENABLED) {
-            FabricGameTestRunner.runHeadlessServer(levelStorageAccess, packRepository);
-            ci.cancel();
+//            FabricGameTestRunner.runHeadlessServer(optionSet, levelStorageAccess, packRepository);
+//            ci.cancel();
         }
     }
 

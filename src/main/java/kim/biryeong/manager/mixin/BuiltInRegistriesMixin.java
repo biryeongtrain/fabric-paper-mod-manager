@@ -1,18 +1,17 @@
 package kim.biryeong.manager.mixin;
 
-import joptsimple.OptionSet;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.server.Main;
+import net.minecraft.core.registries.BuiltInRegistries;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(Main.class)
-public class MainMixin {
-    @Inject(method = "main", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/Bootstrap;validate()V", shift = At.Shift.AFTER))
-    private static void manager$executeInitializer(OptionSet optionSet, CallbackInfo ci) {
+@Mixin(BuiltInRegistries.class)
+public class BuiltInRegistriesMixin {
+    @Inject(method = "createContents", at = @At("RETURN"))
+    private static void onBootstrap(CallbackInfo ci) {
         FabricLoader.getInstance().invokeEntrypoints("main", ModInitializer.class, ModInitializer::onInitialize);
     }
 }

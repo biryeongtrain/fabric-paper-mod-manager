@@ -5,8 +5,8 @@
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "BuiltInRegistriesMixin",
     "CommodoreMixin",
-    "MainMixin",
     "command.CommandsMixin",
     "command.SharedSuggestionProviderMixin",
     "gametest.GameTestServerMixin",

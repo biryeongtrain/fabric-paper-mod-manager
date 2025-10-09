@@ -3,6 +3,7 @@ package kim.biryeong.manager.gametest.impl;
 import java.io.File;
 import java.util.Optional;
 import javax.xml.parsers.ParserConfigurationException;
+import joptsimple.OptionSet;
 import net.minecraft.gametest.framework.GameTestServer;
 import net.minecraft.gametest.framework.GlobalTestReporter;
 import net.minecraft.resources.FileToIdConverter;
@@ -14,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 public final class FabricGameTestRunner {
     public static final boolean ENABLED = System.getProperty(GameTestSystemProperties.ENABLED) != null;
+    private static OptionSet optionSet = null;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FabricGameTestRunner.class);
     private static final String GAMETEST_STRUCTURE_PATH = "gametest/structures";
@@ -22,9 +24,9 @@ public final class FabricGameTestRunner {
 
     private FabricGameTestRunner() {}
 
-    public static void runHeadlessServer(LevelStorageSource.LevelStorageAccess session, PackRepository resourcePackManager) {
+    public static void runHeadlessServer(OptionSet optionSet, LevelStorageSource.LevelStorageAccess session, PackRepository resourcePackManager) {
         String reportPath = System.getProperty(GameTestSystemProperties.REPORT_FILE);
-
+        FabricGameTestRunner.optionSet = optionSet;
         if (reportPath != null) {
             try {
                 GlobalTestReporter.replaceWith(new SavingXmlReportingTestCompletionListener(new File(reportPath)));
@@ -38,5 +40,9 @@ public final class FabricGameTestRunner {
         Optional<String> filter = Optional.ofNullable(System.getProperty(GameTestSystemProperties.FILTER));
         boolean verify = Boolean.getBoolean(GameTestSystemProperties.VERIFY);
         MinecraftServer.spin(thread -> GameTestServer.create(thread, session, resourcePackManager, filter, verify));
+    }
+
+    public static OptionSet getOptionSet() {
+        return optionSet;
     }
 }
