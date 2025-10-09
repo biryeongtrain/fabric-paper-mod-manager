@@ -1,12 +1,8 @@
 package kim.biryeong.manager.mixin;
 
-import com.mojang.brigadier.tree.LiteralCommandNode;
 import joptsimple.OptionSet;
-import kim.biryeong.manager.api.command.CommandRegistrationCallback;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.Commands;
 import net.minecraft.server.Main;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

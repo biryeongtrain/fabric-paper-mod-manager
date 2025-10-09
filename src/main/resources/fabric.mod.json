@@ -4,10 +4,12 @@
   "version": "${version}",
   "entrypoints": {
     "main": [
-      "kim.biryeong.manager.ModManagerInitializer"
+      "kim.biryeong.manager.ModManagerInitializer",
+      "kim.biryeong.manager.gametest.impl.GameTestModInitializer"
     ]
   },
   "mixins": [
     "modManager.mixins.json"
-  ]
+  ],
+  "accessWidener": "modManager.accesswidener"
 }

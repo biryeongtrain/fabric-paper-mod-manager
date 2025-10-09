@@ -15,7 +15,7 @@ spotless {
     java {
         importOrder("")
         removeUnusedImports()
-        indentWithTabs()
+//        indentWithTabs()
         endWithNewline()
     }
 }

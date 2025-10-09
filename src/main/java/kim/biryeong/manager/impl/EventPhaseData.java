@@ -1,10 +1,9 @@
 package kim.biryeong.manager.impl;
 
-import kim.biryeong.manager.impl.toposort.SortableNode;
-import net.minecraft.resources.ResourceLocation;
-
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import kim.biryeong.manager.impl.toposort.SortableNode;
+import net.minecraft.resources.ResourceLocation;
 
 /**
  * Data of an {@link ArrayBackedEvent} phase.

@@ -13,4 +13,3 @@ public interface SharedSuggestionProviderMixin {
         return true;
     }
 }
-

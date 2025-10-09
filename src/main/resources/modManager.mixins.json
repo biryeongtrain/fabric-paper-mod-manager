@@ -8,6 +8,10 @@
     "CommodoreMixin",
     "MainMixin",
     "command.CommandsMixin",
-    "command.SharedSuggestionProviderMixin"
+    "command.SharedSuggestionProviderMixin",
+    "gametest.GameTestServerMixin",
+    "gametest.RegistryDataLoaderMixin",
+    "gametest.StructureTemplateManagerMixin",
+    "gametest.server.MainMixin"
   ]
 }

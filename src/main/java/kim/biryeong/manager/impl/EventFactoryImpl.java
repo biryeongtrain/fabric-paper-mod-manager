@@ -1,9 +1,6 @@
 package kim.biryeong.manager.impl;
 
 import com.google.common.collect.MapMaker;
-import kim.biryeong.manager.event.api.Event;
-import net.minecraft.resources.ResourceLocation;
-
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
@@ -14,6 +11,8 @@ import java.lang.reflect.Proxy;
 import java.util.Collections;
 import java.util.Set;
 import java.util.function.Function;
+import kim.biryeong.manager.event.api.Event;
+import net.minecraft.resources.ResourceLocation;
 
 public final class EventFactoryImpl {
     private static final Set<ArrayBackedEvent<?>> ARRAY_BACKED_EVENTS

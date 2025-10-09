@@ -1,12 +1,11 @@
 package kim.biryeong.manager.impl;
 
-import kim.biryeong.manager.event.api.Event;
-import kim.biryeong.manager.impl.toposort.NodeSorting;
-import net.minecraft.resources.ResourceLocation;
-
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.function.Function;
+import kim.biryeong.manager.event.api.Event;
+import kim.biryeong.manager.impl.toposort.NodeSorting;
+import net.minecraft.resources.ResourceLocation;
 
 class ArrayBackedEvent<T> extends Event<T> {
     private final Function<T[], T> invokerFactory;

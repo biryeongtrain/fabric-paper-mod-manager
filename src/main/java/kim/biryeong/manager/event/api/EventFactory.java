@@ -1,9 +1,8 @@
 package kim.biryeong.manager.event.api;
 
+import java.util.function.Function;
 import kim.biryeong.manager.impl.EventFactoryImpl;
 import net.minecraft.resources.ResourceLocation;
-
-import java.util.function.Function;
 
 public final class EventFactory {
     private EventFactory() { }
