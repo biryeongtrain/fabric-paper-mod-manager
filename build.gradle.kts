@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "kim.biryeong"
-version = "1.0.0"
+version = "1.0.1"
 
 paperweight.awPath.set(file("src/main/resources/modManager.accessWidener"))
 
