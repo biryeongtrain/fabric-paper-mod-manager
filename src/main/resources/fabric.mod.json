@@ -2,19 +2,16 @@
   "schemaVersion": 1,
   "id": "mod-manager",
   "version": "${version}",
-  "authors": ["biryeongtrain"],
+  "authors": [
+    "biryeongtrain"
+  ],
   "description": "All in one Fabric-Paper Mod Loader manager. \n Supports Initializer, Event API, ModList, etc...",
   "entrypoints": {
     "main": [
-      "kim.biryeong.manager.ModManagerInitializer",
-      "kim.biryeong.manager.gametest.impl.GameTestModInitializer"
-    ],
-    "fabric-gametest": [
-        "kim.biryeong.manager.gametest.impl.GameTestTest"
+      "kim.biryeong.manager.ModManagerInitializer"
     ]
   },
   "mixins": [
     "modManager.mixins.json"
-  ],
-  "accessWidener": "modManager.accesswidener"
+  ]
 }

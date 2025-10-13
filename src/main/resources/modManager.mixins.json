@@ -8,10 +8,6 @@
     "BuiltInRegistriesMixin",
     "CommodoreMixin",
     "command.CommandsMixin",
-    "command.SharedSuggestionProviderMixin",
-    "gametest.GameTestServerMixin",
-    "gametest.RegistryDataLoaderMixin",
-    "gametest.StructureTemplateManagerMixin",
-    "gametest.server.MainMixin"
+    "command.SharedSuggestionProviderMixin"
   ]
 }

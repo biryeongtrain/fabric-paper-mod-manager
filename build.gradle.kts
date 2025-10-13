@@ -5,8 +5,6 @@ plugins {
 group = "kim.biryeong"
 version = "1.0.1"
 
-paperweight.awPath.set(file("src/main/resources/modManager.accessWidener"))
-
 dependencies {
 
 }
@@ -25,9 +23,5 @@ tasks {
 				)
 			)
 		}
-	}
-
-	reobfJar {
-		accessWideners.add("modManager.accessWidener")
 	}
 }
