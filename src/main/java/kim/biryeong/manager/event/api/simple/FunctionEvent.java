@@ -3,7 +3,6 @@ package kim.biryeong.manager.event.api.simple;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class FunctionEvent<T,R> {
