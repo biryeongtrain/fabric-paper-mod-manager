@@ -8,6 +8,8 @@
     "BuiltInRegistriesMixin",
     "CommodoreMixin",
     "command.CommandsMixin",
-    "command.SharedSuggestionProviderMixin"
+    "command.SharedSuggestionProviderMixin",
+    "registry.MainMixin",
+    "registry.MappedRegistryMixin"
   ]
 }
