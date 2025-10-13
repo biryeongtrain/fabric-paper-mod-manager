@@ -1,4 +1,4 @@
-package kim.biryeong.manager.impl;
+package kim.biryeong.manager.impl.event;
 
 import com.google.common.collect.MapMaker;
 import java.lang.invoke.MethodHandle;

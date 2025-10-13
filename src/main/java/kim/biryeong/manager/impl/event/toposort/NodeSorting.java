@@ -1,4 +1,4 @@
-package kim.biryeong.manager.impl.toposort;
+package kim.biryeong.manager.impl.event.toposort;
 import com.google.common.annotations.VisibleForTesting;
 import java.util.ArrayList;
 import java.util.Collections;
